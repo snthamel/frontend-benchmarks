@@ -3,12 +3,18 @@ import { resolve } from 'path';
 
 export default defineConfig({
   root: '.',
-  base: '/frontend-benchmarks/',
+  base: '/',
   build: {
     outDir: 'dist',
+    emptyOutDir: true,
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html')
+      },
+      output: {
+        entryFileNames: '[name].js',
+        chunkFileNames: '[name].js',
+        assetFileNames: '[name].[ext]'
       }
     }
   },
@@ -18,10 +24,10 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      './packages/core/dist/index.js': resolve(__dirname, 'packages/core/dist/index.js'),
-      './packages/vanilla-impl/dist/index.js': resolve(__dirname, 'packages/vanilla-impl/dist/index.js'),
-      '@benchmark/core': resolve(__dirname, 'packages/core/dist/index.js'),
-      '@benchmark/vanilla-impl': resolve(__dirname, 'packages/vanilla-impl/dist/index.js'),
+      './packages/core/dist/packages/core/src/index.js': resolve(__dirname, 'packages/core/dist/packages/core/src/index.js'),
+      './packages/vanilla-impl/dist/packages/vanilla-impl/src/index.js': resolve(__dirname, 'packages/vanilla-impl/dist/packages/vanilla-impl/src/index.js'),
+      '@benchmark/core': resolve(__dirname, 'packages/core/dist/packages/core/src/index.js'),
+      '@benchmark/vanilla-impl': resolve(__dirname, 'packages/vanilla-impl/dist/packages/vanilla-impl/src/index.js'),
       '@benchmark/types': resolve(__dirname, 'shared/types/dist/index.js'),
       '@benchmark/utils': resolve(__dirname, 'shared/utils/dist/index.js')
     }

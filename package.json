@@ -9,7 +9,9 @@
     "shared/*"
   ],
   "scripts": {
-    "build": "turbo run build",
+    "build": "npm run build:packages && npm run build:app",
+    "build:packages": "turbo run build",
+    "build:app": "vite build",
     "dev": "turbo run dev --parallel",
     "serve": "vite --host",
     "build-demo": "vite build",
