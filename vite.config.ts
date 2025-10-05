@@ -8,13 +8,13 @@ export default defineConfig({
     outDir: 'dist',
     rollupOptions: {
       input: {
-        main: resolve(__dirname, 'demo.html')
+        main: resolve(__dirname, 'index.html')
       }
     }
   },
   server: {
     port: 3000,
-    open: '/demo.html'
+    open: '/index.html'
   },
   resolve: {
     alias: {

@@ -30,7 +30,7 @@ frontend-benchmarks/
 ├── shared/
 │   ├── types/             # TypeScript definitions ✅
 │   └── utils/             # Common utilities ✅
-└── demo.html              # Quick test interface ✅
+└── index.html             # Quick test interface ✅
 ```
 
 ### Core Components
@@ -87,12 +87,12 @@ python -m http.server 8000
 npx serve .
 ```
 
-Then visit `http://localhost:8000/demo.html` or `http://localhost:8000/test.html`
+Then visit `http://localhost:8000/index.html` or `http://localhost:8000/test.html`
 
 **Full Demo Interface:**
 ```bash
 # Open the full demo in your browser  
-open demo.html
+open index.html
 ```
 
 ## 🛠️ Development
@@ -302,4 +302,8 @@ MIT License - see LICENSE file for details
 
 ---
 
-**Ready to benchmark? Start a local server and visit `http://localhost:8000/demo.html`!** 🎯
+**Ready to benchmark? Start a local server and visit `http://localhost:8000/index.html`!** 🎯
+
+## 🚀 Live Demo
+
+Visit the live demo at: **https://snthamel.github.io/frontend-benchmarks/**
