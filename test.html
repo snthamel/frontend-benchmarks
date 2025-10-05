@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quick Test</title>
+</head>
+<body>
+    <div id="test-container"></div>
+    <script type="module">
+        import { BenchmarkRunner } from './packages/core/dist/packages/core/src/index.js';
+        import { VanillaImplementation } from './packages/vanilla-impl/dist/packages/vanilla-impl/src/index.js';
+        
+        console.log('Modules loaded!');
+        console.log('BenchmarkRunner:', BenchmarkRunner);
+        console.log('VanillaImplementation:', VanillaImplementation);
+        
+        try {
+            const runner = new BenchmarkRunner();
+            const vanilla = new VanillaImplementation('test-container');
+            console.log('✅ Instances created successfully!');
+            document.body.innerHTML += '<p style="color: green;">✅ Benchmark system initialized successfully!</p>';
+        } catch (e) {
+            console.error('❌ Error:', e);
+            document.body.innerHTML += '<p style="color: red;">❌ Error: ' + e.message + '</p>';
+        }
+    </script>
+</body>
+</html>

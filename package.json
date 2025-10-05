@@ -1,0 +1,32 @@
+{
+  "name": "frontend-benchmarks",
+  "version": "1.0.0",
+  "description": "Multi-framework performance benchmarking tool with visual output",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*",
+    "shared/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "serve": "vite --host",
+    "build-demo": "vite build",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "benchmark": "turbo run benchmark"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.19",
+    "turbo": "^1.10.16",
+    "typescript": "^5.2.2",
+    "vite": "^7.1.9"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  }
+}

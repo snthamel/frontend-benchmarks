@@ -1,0 +1,1 @@
+export { VanillaImplementation } from './vanilla-implementation.js';

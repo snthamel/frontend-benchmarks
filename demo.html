@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Framework Benchmarks</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .controls {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .benchmark-area {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .implementation-container {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            min-height: 400px;
+        }
+        .results {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .btn {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+            font-size: 14px;
+        }
+        .btn:hover {
+            background: #0056b3;
+        }
+        .btn:disabled {
+            background: #6c757d;
+            cursor: not-allowed;
+        }
+        .results-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        .results-table th,
+        .results-table td {
+            padding: 8px 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        .results-table th {
+            background-color: #f8f9fa;
+        }
+        .loading {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🚀 Frontend Framework Benchmarks</h1>
+        <p>Visual performance comparison tool for modern frontend frameworks</p>
+    </div>
+
+    <div class="controls">
+        <h3>Benchmark Controls</h3>
+        <button class="btn" onclick="runSingleTest('create-rows')">Create 1,000 Rows</button>
+        <button class="btn" onclick="runSingleTest('replace-all')">Replace All</button>
+        <button class="btn" onclick="runSingleTest('partial-update')">Partial Update</button>
+        <button class="btn" onclick="runSingleTest('select-row')">Select Row</button>
+        <button class="btn" onclick="runSingleTest('swap-rows')">Swap Rows</button>
+        <button class="btn" onclick="runSingleTest('remove-row')">Remove Row</button>
+        <button class="btn" onclick="runSingleTest('clear-rows')">Clear Rows</button>
+        
+        <div style="margin-top: 15px;">
+            <button class="btn" onclick="runFullSuite()" style="background: #28a745;">Run Full Benchmark Suite</button>
+            <button class="btn" onclick="clearResults()" style="background: #dc3545;">Clear Results</button>
+        </div>
+    </div>
+
+    <div class="results">
+        <h3>Benchmark Results</h3>
+        <div id="results-content">
+            <p class="loading">Run a benchmark to see results...</p>
+        </div>
+    </div>
+
+    <div class="benchmark-area">
+        <div class="implementation-container">
+            <div id="vanilla-container"></div>
+        </div>
+        <div class="implementation-container">
+            <div id="framework2-container">
+                <h2>React Implementation</h2>
+                <p style="color: #666;">Coming soon...</p>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="./demo.js"></script>
+</body>
+</html>

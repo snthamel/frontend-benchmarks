@@ -1,0 +1,20 @@
+{
+  "name": "@benchmark/core",
+  "version": "1.0.0",
+  "description": "Core benchmarking engine for frontend frameworks",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "dev": "tsc --watch"
+  },
+  "dependencies": {
+    "@benchmark/types": "*",
+    "@benchmark/utils": "*"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  }
+}
