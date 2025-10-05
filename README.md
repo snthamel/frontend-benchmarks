@@ -303,7 +303,3 @@ MIT License - see LICENSE file for details
 ---
 
 **Ready to benchmark? Start a local server and visit `http://localhost:8000/index.html`!** 🎯
-
-## 🚀 Live Demo
-
-Visit the live demo at: **https://snthamel.github.io/frontend-benchmarks/**
